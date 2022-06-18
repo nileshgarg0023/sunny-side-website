@@ -1,0 +1,92 @@
+.feature {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+
+    @include breakpoint-up(medium) {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    &__wrapper {
+        padding: 4.4375rem 1.75rem 4.1875rem 1.75rem;
+    }
+
+    .text-box {
+        background-color: $white;
+        margin: auto;
+
+        @include breakpoint-up(medium) {
+            width: 65%;
+
+        }
+
+        &__title {
+            color: $veryDarkDesaturatedBlue;    
+            margin-bottom: 2.9375rem;
+            width: 70%;
+        }
+
+        &__text {
+            margin-bottom: 2.9375rem;
+        }
+
+        &__more {
+            position: relative;
+            font-family: $ff-fraunces;
+            color: $veryDarkDesaturatedBlue;
+            font-size: 0.75rem;
+            font-weight: 800;
+            z-index: 1;
+            margin-bottom: 2.9375rem;
+
+            &::before {
+                content: " ";
+                display: block;
+                position: absolute;
+                background-color: $yellow;
+                height: rem(8);
+                width: 114%;
+                border-radius: 31.25rem;
+                top: 0.625rem;
+                left: -0.3125rem;
+                opacity: 36%;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                opacity: 100%;
+            }
+        }
+    }
+
+    .image-box {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .it-box {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: rem(10);
+
+        color: $darkDesaturatedCyan;
+        text-align: center;
+
+        min-height: 37.5rem;
+
+        display: flex;
+        justify-content: end;
+        align-content: center;
+        flex-direction: column;
+
+        &__title {
+            font-weight: 900;
+        }
+
+        p {
+            color: $darkDesaturatedCyan;
+
+        }
+    }
+}

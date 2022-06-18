@@ -1,0 +1,60 @@
+.footer{
+    background-color: $lightCyan;
+    text-align: center;
+    padding:  3.9375rem 2.5rem;
+
+    a {
+        color: $darkDesaturatedCyan;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 3rem;
+    }
+
+    &__links {
+        margin-bottom: 5.375em;
+    
+        a {
+            color: $darkModerateCyan;
+            transition: color 150ms ease-in-out;
+      
+            &:hover {
+              color: $white;
+            }
+
+            &:not(:last-child){
+                margin-right: 5.375rem;
+                
+                @include breakpoint-down(small) {
+                    margin-right: 1.5rem;
+                }
+
+            }
+          }
+
+         
+    }
+
+    &__social {
+        a {
+            display: inline-block;
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+            &:hover svg path {
+                fill: $white;
+            }
+
+            &:not(:last-child){
+                margin-right: 1.8125rem;
+
+                @include breakpoint-down(small) {
+                    margin-right: 0.7rem;
+                }
+
+            }
+        }
+    }
+}
